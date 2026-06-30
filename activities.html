@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Activities</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Portfolio home">
+      <span class="brand-mark">P</span>
+      <span>Portfolio</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Self Introduction</a>
+      <a class="active" href="activities.html">Activities</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <p class="eyebrow">Activity List</p>
+      <h1>Projects and experiences</h1>
+      <p>
+        Add your real school projects, club activities, volunteer work, contest results,
+        or learning records here.
+      </p>
+    </section>
+
+    <section class="activity-toolbar" aria-label="Activity filters">
+      <button class="filter-button active" type="button" data-filter="all">All</button>
+      <button class="filter-button" type="button" data-filter="project">Projects</button>
+      <button class="filter-button" type="button" data-filter="team">Teamwork</button>
+      <button class="filter-button" type="button" data-filter="learning">Learning</button>
+    </section>
+
+    <section class="activity-grid" aria-live="polite">
+      <article class="activity-card" data-category="project">
+        <div class="activity-meta">
+          <span>Project</span>
+          <time datetime="2026-03">Mar 2026</time>
+        </div>
+        <h2>Personal Portfolio Website</h2>
+        <p>Designed and built a responsive two-page website using HTML, CSS, and JavaScript.</p>
+        <ul>
+          <li>Created layout and navigation</li>
+          <li>Applied modern material-inspired styling</li>
+          <li>Tested mobile and desktop views</li>
+        </ul>
+      </article>
+
+      <article class="activity-card" data-category="team">
+        <div class="activity-meta">
+          <span>Teamwork</span>
+          <time datetime="2026-04">Apr 2026</time>
+        </div>
+        <h2>Class Presentation Team</h2>
+        <p>Worked with teammates to research a topic, organize slides, and deliver a presentation.</p>
+        <ul>
+          <li>Shared roles with team members</li>
+          <li>Organized key points clearly</li>
+          <li>Practiced public speaking</li>
+        </ul>
+      </article>
+
+      <article class="activity-card" data-category="learning">
+        <div class="activity-meta">
+          <span>Learning</span>
+          <time datetime="2026-05">May 2026</time>
+        </div>
+        <h2>JavaScript Practice</h2>
+        <p>Studied basic DOM control and used buttons, filters, and events in small examples.</p>
+        <ul>
+          <li>Used event listeners</li>
+          <li>Updated page elements dynamically</li>
+          <li>Improved debugging habits</li>
+        </ul>
+      </article>
+
+      <article class="activity-card" data-category="project">
+        <div class="activity-meta">
+          <span>Project</span>
+          <time datetime="2026-06">Jun 2026</time>
+        </div>
+        <h2>Idea Planning Board</h2>
+        <p>Planned a simple web service idea by defining users, problems, and core features.</p>
+        <ul>
+          <li>Created feature list</li>
+          <li>Sketched screen flow</li>
+          <li>Reviewed feedback</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Your Name. Add your real activities before publishing.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
