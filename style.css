@@ -1,14 +1,15 @@
 :root {
-  --bg: #f6f7fb;
+  --bg: #f4fbff;
   --surface: #ffffff;
-  --surface-strong: #eef5f1;
-  --text: #172026;
-  --muted: #65717a;
-  --primary: #1f8a70;
-  --primary-dark: #146651;
-  --accent: #f5a524;
-  --line: #dde4ea;
-  --shadow: 0 16px 38px rgba(23, 32, 38, 0.12);
+  --surface-strong: #e9f7ff;
+  --text: #143042;
+  --muted: #607687;
+  --primary: #2aa8f2;
+  --primary-dark: #0877b8;
+  --accent: #bceaff;
+  --accent-strong: #74d1ff;
+  --line: #c9e8f7;
+  --shadow: 0 18px 42px rgba(42, 168, 242, 0.16);
   --radius: 8px;
 }
 
@@ -19,7 +20,9 @@
 body {
   margin: 0;
   font-family: "Noto Sans KR", Arial, sans-serif;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, rgba(116, 209, 255, 0.38), transparent 36vw),
+    linear-gradient(135deg, #dff5ff 0%, #ffffff 44%, #f4fbff 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -38,7 +41,7 @@ a {
   justify-content: space-between;
   min-height: 72px;
   padding: 0 6vw;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.82);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
 }
@@ -63,8 +66,9 @@ a {
   width: 38px;
   height: 38px;
   border-radius: var(--radius);
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--accent-strong));
   color: white;
+  box-shadow: 0 8px 18px rgba(42, 168, 242, 0.28);
 }
 
 .site-nav {
@@ -85,7 +89,7 @@ a {
 .filter-button:hover,
 .filter-button.active {
   background: var(--surface-strong);
-  border-color: #c8dbd2;
+  border-color: var(--line);
   color: var(--primary-dark);
 }
 
@@ -121,6 +125,16 @@ main {
   padding: 56px 0;
 }
 
+.hero::before {
+  content: "";
+  position: fixed;
+  inset: 72px 0 auto 0;
+  height: 36vh;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(188, 234, 255, 0.38), transparent);
+  z-index: -1;
+}
+
 .eyebrow {
   margin: 0 0 10px;
   color: var(--primary-dark);
@@ -142,6 +156,7 @@ h1 {
   font-size: clamp(2.2rem, 8vw, 5.35rem);
   line-height: 1.02;
   letter-spacing: 0;
+  color: #0e2c40;
 }
 
 h2 {
@@ -185,13 +200,13 @@ h3 {
 }
 
 .button.primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), #6fd3ff);
   color: white;
-  box-shadow: 0 10px 24px rgba(31, 138, 112, 0.28);
+  box-shadow: 0 12px 26px rgba(42, 168, 242, 0.32);
 }
 
 .button.secondary {
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid var(--line);
 }
 
@@ -200,8 +215,9 @@ h3 {
 .activity-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 
 .profile-panel {
@@ -215,7 +231,7 @@ h3 {
   height: 86px;
   margin-bottom: 18px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, var(--primary), var(--accent-strong));
   color: white;
   font-size: 1.35rem;
   font-weight: 800;
@@ -277,8 +293,9 @@ h3 {
   width: 42px;
   height: 42px;
   border-radius: var(--radius);
-  background: #fff1d6;
-  color: #805400;
+  background: linear-gradient(135deg, #dff5ff, #ffffff);
+  border: 1px solid var(--line);
+  color: var(--primary-dark);
   font-weight: 800;
 }
 
@@ -298,9 +315,10 @@ h3 {
 .skill-list span {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.88);
   padding: 12px 14px;
   font-weight: 800;
+  box-shadow: 0 8px 18px rgba(42, 168, 242, 0.1);
 }
 
 .page-title {
@@ -322,7 +340,7 @@ h3 {
 }
 
 .filter-button {
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.9);
   cursor: pointer;
 }
 
